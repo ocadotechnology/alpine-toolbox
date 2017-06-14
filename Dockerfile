@@ -8,4 +8,5 @@ RUN apk add --no-cache curl \
                        bind-tools \
                        tcpdump \
                        bash
-USER nobody:nobody
+
+ENTRYPOINT ["/bin/bash"]
