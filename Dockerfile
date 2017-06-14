@@ -1,5 +1,6 @@
 FROM gcr.io/google-containers/exechealthz-amd64:v1.2.0
 
+USER root:root
 RUN apk add --no-cache curl \
                        wget \
                        netcat-openbsd \
@@ -7,3 +8,4 @@ RUN apk add --no-cache curl \
                        bind-tools \
                        tcpdump \
                        bash
+USER nobody:nobody
